@@ -1,0 +1,33 @@
+﻿header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    .navbar-dark {
+        .navbar-nav {
+            .nav-link {
+                color: white;
+                position: relative;
+                &:after {
+                    content: "";
+                    height: 1px;
+                    width: 0;
+                    background-color: red;
+                    left: 0;
+                    bottom: -3px;
+                    display: block;
+                    position: absolute;
+                }
+                &:hover,  &.active {
+                    transition: 0.5s;
+                    color: red;
+                    &:after {
+                        transition: 0.5s;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
