@@ -11,3 +11,9 @@ even onder de builder.Services.AddControllersWithViews();
 
 ## commandline code creator package
 -Microsoft.EntityFrameworkCore.Tools -> versie 8.0.0
+
+dotnet tool install -g dotnet-aspnet-codegenerator
+
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
