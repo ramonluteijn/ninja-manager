@@ -29,5 +29,51 @@
                 }
             }
         }
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+            li {
+                height: 41px;
+                width: 41px;
+                display: inline;
+                margin-left: 15px;
+
+                &.ninjaLi {
+                    height: 41px;
+                    width: 41px;
+                    display: inline;
+                    margin-left: 15px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 40px;
+                        width: 40px;
+                        transition: .3s;
+                        position: relative;
+
+                        span {
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: auto 50%;
+                            display: block;
+                            position: relative;
+
+                            &.ninja {
+                                background-image: url("../images/ninja.svg");
+                                background-size: cover;
+                                display: block;
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -23,10 +23,18 @@
                         <a class="nav-link @(Context.Request.Path.Equals("/") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Shop" asp-action="Shop">Shop</a>
+                        <a class="nav-link" asp-area="" asp-controller="" asp-action="">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+
+                <ul class="icons">
+                    <li class="ninjaLi">
+                        <a  asp-area="" asp-controller="" asp-action="">
+                            <span class="ninja"></span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -38,13 +46,14 @@
         @RenderBody()
     </main>
 </div>
+
 <div>
     Current URL: @Context.Request.Path.ToString()
 </div>
+
 <footer class="footer">
     <div class="container">
         &copy; 2024 - <a class="text-white text-decoration-none" asp-area="" asp-controller="Home" asp-action="Index">ninjamanager</a>
-
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
