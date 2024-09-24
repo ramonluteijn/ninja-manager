@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ninjamanager.Models.ShopItem>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row mx-auto">
+        <div class="col-3 filter-bar bg-white">
+            @* voorbeeld filter *@
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>Filter</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Price</h4>
+                        <div class="form-check form-switch">
+                            <input class="form-check form-switch" type="checkbox" id="flexSwitchCheckDefault">
+                            <label class="form-check form-switch" for="flexSwitchCheckDefault">Ascending</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 gallery">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col item">
+                            <div class="h-100">
+                                <div class="card h-100 p-3 position-relative border-0 rounded-0">
+                                    <div class="card-content w-100 h-100">
+                                        <div class="card-body">
+                                            <p class="card-text-title">@item.Name </p>
+                                            <p class="card-text  d-none ">
+                                                @* @item.Description *@
+                                            </p>
+                                        </div>
+                                        <div class="card-footer align-items-center row mx-auto w-100 bg-white">
+                                            <div class="priceDiv">
+                                                <p class="price">€&nbsp;@item.Price</p>
+                                            </div>
+                                            <div class="btnDiv">
+                                                <button type="submit" class="btn btn-success end-0 w-100 bottom-0">Buy</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
