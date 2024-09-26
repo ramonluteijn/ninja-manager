@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - ninjamanager</title>
+    <title>@ViewData["Title"] - Ninjamanager</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/imports.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/ninjamanager.styles.css" asp-append-version="true"/>
@@ -12,7 +12,7 @@
 <header class="fixed-top">
     <nav class="navbar navbar-dark navbar-expand-lg w-100">
         <div class="container">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ninjamanager</a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ninjamanager</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
                         <a class="nav-link @(Context.Request.Path.Equals("/") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="Index">Shop</a>
+                        <a class="nav-link @(Context.Request.Path.Equals("/shop") ? "active" : "")" asp-area="" asp-controller="Shop" asp-action="Index">Shop</a>
               </li>
                     <li class="nav-item">
                         <a class="nav-link @(Context.Request.Path.Equals("/home/privacy") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -32,21 +32,26 @@
 
                 <ul class="icons">
                     <li class="ninjaLi">
-                        <a  asp-area="" asp-controller="" asp-action="">
-                            <span class="ninja"></span>
-                        </a>
+                        <a><span class="ninja"></span></a>
+                        <ul class="submenu">
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                <li class="login"><a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-login px-5 py-2 w-100">Login</a></li>
+                                <li class="register"><a asp-area="" asp-controller="Account" asp-action="Register" class="btn px-5 py-2 w-100">Register</a></li>
+                            }else{
+                                <li class="my-account"><a href="" class="w-100 text-start">My ninja</a></li>
+                                <li class="logout"><a asp-area="" asp-controller="Account" asp-action="Logout" class="w-100 text-start">Logout</a></li>
+                            }
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-@* <div class="container"> *@
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-@* </div> *@
-
+<main role="main" class="pb-3">
+    @RenderBody()
+</main>
 <div>
     Current URL: @Context.Request.Path.ToString()
 </div>

@@ -46,6 +46,7 @@
                     width: 41px;
                     display: inline;
                     margin-left: 15px;
+                    position: relative;
 
                     a {
                         display: flex;
@@ -70,6 +71,67 @@
                                 width: 40px;
                                 height: 40px;
                             }
+                        }
+                    }
+                    .submenu {
+                        display: none;
+                        opacity: 0;
+                        transform: scale(0) translate(-20px, -35px);
+                        transition: 0.3s;
+                        position: absolute;
+                        right: 0;
+                        transform-origin: top right;
+                        min-width: 200px;
+                        background-color: white;
+                        padding: 15px;
+                        border-radius: 5px;
+
+                        li {
+                            margin: auto;
+                            a, a:visited {
+                                display: block;
+                                height: unset;
+                                background-color: transparent;
+
+                                &.btn {
+                                    margin-bottom: 10px;
+                                    border-radius: 5px;
+                                    border: 1px solid red;
+
+                                    &:hover {
+                                        background-color: green;
+                                        border: 1px solid green;
+                                        color: white;
+                                    }
+
+
+                                    &.btn-login {
+                                        background-color: red;
+                                        border: 1px solid red;
+                                        color: white;
+
+                                        &:hover {
+                                            background-color: green;
+                                            border: 1px solid green;
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.my-account {
+                                a, a:visited {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .submenu {
+                            display: block !important;
+                            opacity: 1;
+                            transform: scale(1) translate(0, 0);
                         }
                     }
                 }
