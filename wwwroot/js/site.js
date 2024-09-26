@@ -1,4 +1,27 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿(function($){
 
-// Write your JavaScript code.
+    $( document ).ready(function() {
+        filter();
+    });
+
+    function filter() {
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                    content.classList.remove("mb-3");
+                } else {
+                    content.style.maxHeight = "fit-content"
+                    content.classList.add("mb-3");
+                }
+            });
+        }
+    }
+})(jQuery);
+
+

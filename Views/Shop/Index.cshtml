@@ -5,27 +5,48 @@
 }
 
 <div class="container">
+    <div class="row mx-auto mb-3">
+        <div class="col-6">
+            <p>Items found: </p>
+        </div>
+        <div class="col-6 p-0">
+            <div class="float-end d-flex sorting gap-3">
+                <select class="form-select shadow-none">
+                    <option value="newest">New to old</option>
+                    <option value="oldest">Old to New</option>
+                    <option value="highlow">High to low</option>
+                    <option value="lowhigh">Low to high</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
     <div class="row mx-auto">
         <div class="col-3 filter-bar ">
-            @* voorbeeld filter *@
+            @* voorbeeld filter mischien iets van type (helm body..), rarity (comon, rare...), prijs(prisj tussen .. en ..) *@
             <div class="container bg-white py-3">
-                        <h4>Category</h4>
-                        <div class="form-check form-switch">
+                <div>
+                    <button class="btn mb-2 p-0 text-start collapsible">Category</button>
+                    <div class="content category">
+                        <div>
                             @if (ViewBag.Categories != null)
                             {
                                 @foreach (var category in ViewBag.Categories)
                                 {
-                                    <div class="d-flex flex-row">
-                                        <input class="form-check form-switch" type="checkbox" id="@category.Id">
-                                        <label class="form-check" for="@category.Id">@category.Name</label>
+                                    <div class="">
+                                        <input class="form-switch" type="checkbox" id="@category.Id">
+                                        <label class="" for="@category.Id">@category.Name</label>
                                     </div>
                                 }
                             }
                         </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-9 gallery">
-            <div class="container">
+            <div class="container pe-0">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     @if (ViewBag.Items != null)
                     {
