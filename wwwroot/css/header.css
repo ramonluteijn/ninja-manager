@@ -1,0 +1,79 @@
+﻿header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    .navbar-dark {
+        .navbar-nav {
+            .nav-link {
+                color: white;
+                position: relative;
+                &:after {
+                    content: "";
+                    height: 1px;
+                    width: 0;
+                    background-color: red;
+                    left: 0;
+                    bottom: -3px;
+                    display: block;
+                    position: absolute;
+                }
+                &:hover,  &.active {
+                    transition: 0.5s;
+                    color: red;
+                    &:after {
+                        transition: 0.5s;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+            li {
+                height: 41px;
+                width: 41px;
+                display: inline;
+                margin-left: 15px;
+
+                &.ninjaLi {
+                    height: 41px;
+                    width: 41px;
+                    display: inline;
+                    margin-left: 15px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 40px;
+                        width: 40px;
+                        transition: .3s;
+                        position: relative;
+
+                        span {
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: auto 50%;
+                            display: block;
+                            position: relative;
+
+                            &.ninja {
+                                background-image: url("../images/ninja.svg");
+                                background-size: cover;
+                                display: block;
+                                width: 40px;
+                                height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
