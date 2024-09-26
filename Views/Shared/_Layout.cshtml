@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -23,8 +23,8 @@
                         <a class="nav-link @(Context.Request.Path.Equals("/") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="" asp-action="">Shop</a>
-                    </li>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="Index">Shop</a>
+              </li>
                     <li class="nav-item">
                         <a class="nav-link @(Context.Request.Path.Equals("/home/privacy") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
@@ -41,11 +41,11 @@
         </div>
     </nav>
 </header>
-<div class="container">
+@* <div class="container"> *@
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
-</div>
+@* </div> *@
 
 <div>
     Current URL: @Context.Request.Path.ToString()
