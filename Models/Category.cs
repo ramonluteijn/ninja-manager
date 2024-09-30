@@ -12,5 +12,7 @@
             Id = id;
             Name = name;
         }
+
+        public List<Product> Products { get; set; }
     }
 }

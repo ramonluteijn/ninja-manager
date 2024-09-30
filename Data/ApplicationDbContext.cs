@@ -9,5 +9,8 @@ namespace ninjamanager.Data
             : base(options)
         {
         }
+        public DbSet<ninjamanager.Models.Product> Products { get; set; } = default!;
+        public DbSet<ninjamanager.Models.Category> Categories { get; set; } = default!;
+        public DbSet<ninjamanager.Models.User> Users { get; set; } = default!;
     }
 }

@@ -5,7 +5,7 @@
 namespace ninjamanager.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCategory : Migration
+    public partial class add_catergories_table : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

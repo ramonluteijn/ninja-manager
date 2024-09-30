@@ -1,26 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ninjamanager.Models;
 using System.Collections.Generic;
+using ninjamanager.Data;
 
 namespace ninjamanager.Controllers
 {
     public class ShopController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public ShopController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            var categories = new List<Category>
-            {
-                new Category { Id = 1, Name = "cat1" },
-                new Category { Id = 2, Name = "cat2" },
-                new Category { Id = 3, Name = "cat3" }
-            };
-
-            var items = new List<ShopItem>
-            {
-                new ShopItem { Id = 1, Name = "prod1", Price = 12 },
-                new ShopItem { Id = 2, Name = "prod2", Price = 15 },
-                new ShopItem { Id = 3, Name = "prod3", Price = 20 }
-            };
+            List<Product> items = _context.Products.ToList();
+            List<Category> categories = _context.Categories.ToList();
             ViewBag.Items = items;
             ViewBag.Categories = categories;
             return View();

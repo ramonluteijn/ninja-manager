@@ -11,8 +11,8 @@ using ninjamanager.Data;
 namespace ninjamanager.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240927145000_AddCategory")]
-    partial class AddCategory
+    [Migration("20240927145000_add_Categories_table")]
+    partial class add_catergories_table
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
