@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ninjamanager", "ninjamanager.csproj", "{1357AABD-05FB-4CA7-9422-C710A42943DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ninjamanager", "ninjamanager\ninjamanager.csproj", "{1357AABD-05FB-4CA7-9422-C710A42943DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4235853A-C8D4-434F-9983-BA9AAD4395BB}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ninjamanager.data", "ninjamanager.data\ninjamanager.data.csproj", "{98488F20-2B36-406D-9AC2-E473355E4408}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,5 +19,9 @@ Global
 		{1357AABD-05FB-4CA7-9422-C710A42943DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1357AABD-05FB-4CA7-9422-C710A42943DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1357AABD-05FB-4CA7-9422-C710A42943DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98488F20-2B36-406D-9AC2-E473355E4408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98488F20-2B36-406D-9AC2-E473355E4408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98488F20-2B36-406D-9AC2-E473355E4408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98488F20-2B36-406D-9AC2-E473355E4408}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
