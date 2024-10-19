@@ -1,4 +1,4 @@
-namespace ninjamanager.Models
+namespace ninjamanager.data.Models
 {
     public class ErrorViewModel
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ninjamanager.Data;
-using ninjamanager.Models;
+using ninjamanager.data.Data;
+using ninjamanager.data.Models;
 
 namespace ninjamanager.Controllers.auth;
 

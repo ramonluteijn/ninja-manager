@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ninjamanager.Models;
-using System.Collections.Generic;
-using ninjamanager.Data;
+using ninjamanager.data.Data;
+using ninjamanager.data.Models;
 
 namespace ninjamanager.Controllers
 {

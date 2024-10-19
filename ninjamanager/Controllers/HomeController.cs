@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using ninjamanager.Models;
+using ninjamanager.data.Models;
+
 
 namespace ninjamanager.Controllers;
 

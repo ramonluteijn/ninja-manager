@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using ninjamanager.Data;
-using ninjamanager.Models;
+using ninjamanager.data.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

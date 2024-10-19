@@ -22,9 +22,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Migrations\" />
-      <Folder Include="Models\ProductCrud\" />
       <Folder Include="Views\ProductCrud\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ninjamanager.data\ninjamanager.data.csproj" />
     </ItemGroup>
 
 </Project>
